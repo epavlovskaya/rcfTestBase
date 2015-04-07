@@ -2,7 +2,7 @@ package com.selectica.Perfectpackage.definitions.CFR1BO.CFR1Details.scripts;
 
 import com.selectica.rcfscripts.AbstractDataReadScript;
 
-/***/
+/**null*/
 public class OnVALIDATE_importValidateCpName extends AbstractDataReadScript<Boolean> {
 
     @Override

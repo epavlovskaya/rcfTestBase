@@ -2,7 +2,7 @@ package com.selectica.Perfectpackage.definitions.CNDABO.CNDADetails.scripts;
 
 import com.selectica.rcfscripts.AbstractDataWriteScript;
 
-/***/
+/**null*/
 public class OnSAVE extends AbstractDataWriteScript<Boolean> {
 
     @Override

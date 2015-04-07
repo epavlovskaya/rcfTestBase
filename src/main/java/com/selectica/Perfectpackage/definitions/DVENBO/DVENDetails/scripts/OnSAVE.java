@@ -2,7 +2,7 @@ package com.selectica.Perfectpackage.definitions.DVENBO.DVENDetails.scripts;
 
 import com.selectica.rcfscripts.AbstractDataWriteScript;
 
-/***/
+/**null*/
 public class OnSAVE extends AbstractDataWriteScript<Boolean> {
 
     @Override

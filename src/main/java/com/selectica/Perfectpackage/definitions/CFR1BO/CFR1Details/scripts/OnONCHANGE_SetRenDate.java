@@ -2,7 +2,7 @@ package com.selectica.Perfectpackage.definitions.CFR1BO.CFR1Details.scripts;
 
 import com.selectica.rcfscripts.AbstractDataWriteScript;
 
-/***/
+/**null*/
 public class OnONCHANGE_SetRenDate extends AbstractDataWriteScript<Boolean> {
 
     @Override

@@ -2,7 +2,7 @@ package com.selectica.Perfectpackage.definitions.RREPBO.RREPDetails.scripts;
 
 import com.selectica.rcfscripts.AbstractDataWriteScript;
 
-/***/
+/**null*/
 public class OnONCHANGE_SetCPDetails extends AbstractDataWriteScript<Boolean> {
 
     @Override

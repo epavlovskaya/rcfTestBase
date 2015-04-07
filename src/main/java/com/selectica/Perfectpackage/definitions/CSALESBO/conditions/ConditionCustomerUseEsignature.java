@@ -2,7 +2,7 @@ package com.selectica.Perfectpackage.definitions.CSALESBO.conditions;
 
 import com.selectica.rcfscripts.AbstractBOReadScript;
 
-/***/
+/**null*/
 public class ConditionCustomerUseEsignature extends AbstractBOReadScript<Boolean> {
 
     @Override
