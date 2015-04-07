@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template type="general" templateVersion="1.0" accountID="0.0" xmlns="http://selectica.com/internalmodel/data" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <module infoComponentRef="ReqCustDetails" type="CustData" name="CustData">
+        <component max="1" min="1" ref="CustDetails" name="ReqCustDetails"/>
+        <component max="*" min="0" ref="CustReqDCustDBA" name="ReqDCustDBA"/>
+        <component max="*" min="0" ref="CustAdditionalAddresses" name="ReqCustAdditionalAddresses"/>
+        <component max="*" min="0" ref="Attachment" name="ReqAttachment"/>
+        <component max="*" min="0" ref="AComment" name="ReqAComment"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Customer" attribute="CustData"/>
+                <ns2:LocalizedString value="Summary" attribute="ReqCustDetails"/>
+                <ns2:LocalizedString value="DBA Details" attribute="ReqDCustDBA"/>
+                <ns2:LocalizedString value="Additional Addresses" attribute="ReqCustAdditionalAddresses"/>
+                <ns2:LocalizedString value="Attachments" attribute="ReqAttachment"/>
+                <ns2:LocalizedString value="Comments" attribute="ReqAComment"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </module>
+    <componentDef xmlVersion="" tableName="CONTRACT1" type="CustDetails" extends="InfoComponent" name="CustDetails">
+        <param readonly="true" valuePath="bundle/bundleTrackingNum" ref="sysInteger" name="trackingNumber"/>
+        <param isRequiredScript="name_Required" defaultValue="?" ref="genericString" isHeader="true" name="name"/>
+        <param isRequiredScript="dirStatus_Required" defaultValue="Active" ref="directoryStatusList" isHeader="true" name="dirStatus"/>
+        <param isRequiredScript="dirCategory_Required" ref="Customer Category List" isHeader="true" name="dirCategory"/>
+        <param ref="genericString" name="dirAdr1"/>
+        <param ref="genericString" name="dirAdr2"/>
+        <param ref="genericString" name="dirCity"/>
+        <param ref="usStatesList" name="dirState"/>
+        <param ref="genericString" name="dirZip"/>
+        <param defaultValueScript="dirCountry_DefaultValue" ref="countryList" name="dirCountry"/>
+        <param ref="genericString" name="dirWebSite"/>
+        <param ref="commentString" name="dirDesc"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Summary" attribute="CustDetails"/>
+                <ns2:LocalizedString value="Tracking #" attribute="trackingNumber"/>
+                <ns2:LocalizedString value="Customer Name" attribute="name"/>
+                <ns2:LocalizedString value="Customer Status" attribute="dirStatus"/>
+                <ns2:LocalizedString value="Customer Category" attribute="dirCategory"/>
+                <ns2:LocalizedString value="Customer Address Line 1" attribute="dirAdr1"/>
+                <ns2:LocalizedString value="Customer Address Line 2" attribute="dirAdr2"/>
+                <ns2:LocalizedString value="Customer City" attribute="dirCity"/>
+                <ns2:LocalizedString value="Customer State/Province" attribute="dirState"/>
+                <ns2:LocalizedString value="Customer Zip/Postal Code" attribute="dirZip"/>
+                <ns2:LocalizedString value="Customer Country" attribute="dirCountry"/>
+                <ns2:LocalizedString value="Customer Website" attribute="dirWebSite"/>
+                <ns2:LocalizedString value="Customer Description" attribute="dirDesc"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript name="name_Required"/>
+        <ns2:ExecutionScript name="dirStatus_Required"/>
+        <ns2:ExecutionScript name="dirCategory_Required"/>
+        <ns2:ExecutionScript name="dirCountry_DefaultValue"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.Cust.CustDetails.OnSaveTrigger" name="OnSaveTrigger"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.Cust.CustDetails.OnValidateTrigger" name="OnValidateTrigger"/>
+        <componentAction trigger="SAVE" scriptRef="OnSaveTrigger"/>
+        <componentAction trigger="VALIDATE" scriptRef="OnValidateTrigger"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="CustDBADetails">
+        <param isRequiredScript="dbaName_Required" ref="genericString" isHeader="true" name="dbaName"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="DBA Details" attribute="CustDBADetails"/>
+                <ns2:LocalizedString value="DBA Name" attribute="dbaName"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript name="dbaName_Required"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="CustAdditionalAddresses">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Additional Addresses" attribute="CustAdditionalAddresses"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="dirCustCatList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Category 1"/>
+            <possibleValue ref="Category 2"/>
+            <possibleValue ref="Category 3"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Customer Category List" attribute="dirCustCatList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Category 1" attribute="Category 1"/>
+                <ns2:LocalizedString value="Category 2" attribute="Category 2"/>
+                <ns2:LocalizedString value="Category 3" attribute="Category 3"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+</template>

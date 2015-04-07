@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Workflows xmlns="http://selectica.com/internalmodel/workflow" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <Workflow status="Active" xmlVersion="0" name="ASSEMBLE_COLLABORATE_EXECUTE_MANAGE_VIEWAPPROVAL_WF">
+        <SequentialTask name="RootTask">
+            <SimpleTask name="Assemble">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Assemble" attribute="Assemble"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="Collaborate">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Negotiate" attribute="Collaborate"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="Execute">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Execute" attribute="Execute"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="Manage">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Manage" attribute="Manage"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="ViewApproval">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="ViewApproval" attribute="ViewApproval"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Contract" attribute="RootTask"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </SequentialTask>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Assemble, Collaborate, Execute, Manage, ViewApproval" attribute="ASSEMBLE_COLLABORATE_EXECUTE_MANAGE_VIEWAPPROVAL_WF"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </Workflow>
+</Workflows>

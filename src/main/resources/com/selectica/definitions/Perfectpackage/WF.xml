@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Workflows xmlns="http://selectica.com/internalmodel/workflow" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <Workflow status="Active" xmlVersion="0" name="WF">
+        <SequentialTask name="RootTask">
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Contract" attribute="RootTask"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </SequentialTask>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="" attribute="WF"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </Workflow>
+</Workflows>

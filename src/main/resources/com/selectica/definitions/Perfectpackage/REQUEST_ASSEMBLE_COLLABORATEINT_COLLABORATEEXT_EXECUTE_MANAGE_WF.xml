@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Workflows xmlns="http://selectica.com/internalmodel/workflow" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <Workflow status="Active" xmlVersion="0" name="REQUEST_ASSEMBLE_COLLABORATEINT_COLLABORATEEXT_EXECUTE_MANAGE_WF">
+        <SequentialTask name="RootTask">
+            <SimpleTask name="Request">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Request" attribute="Request"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="Assemble">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Assemble" attribute="Assemble"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="CollaborateInt">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Collaborate" attribute="CollaborateInt"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="CollaborateExt">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Negotiate" attribute="CollaborateExt"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="Execute">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Execute" attribute="Execute"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <SimpleTask name="Manage">
+                <ns2:display>
+                    <ns2:LocaleSet locale="en">
+                        <ns2:LocalizedString value="Manage" attribute="Manage"/>
+                    </ns2:LocaleSet>
+                </ns2:display>
+            </SimpleTask>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Contract" attribute="RootTask"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </SequentialTask>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Request, Assemble, CollaborateInt, CollaborateExt, Execute, Manage" attribute="REQUEST_ASSEMBLE_COLLABORATEINT_COLLABORATEEXT_EXECUTE_MANAGE_WF"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </Workflow>
+</Workflows>

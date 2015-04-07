@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BundleDefinitions xmlns="http://selectica.com/internalmodel/BundleDefinition" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <BundleDefinition status="Draft" usageType="Contract" workflow="REQUEST_ASSEMBLE_COLLABORATEINT_COLLABORATEEXT_EXECUTE_MANAGE_WF" module="PROCData" name="PROCBO">
+        <dataDefList name="RequestDataDefList">
+            <dataDef name="ReqPROCDetails">
+                <dataDefData path="ReqPROCDetails/"/>
+            </dataDef>
+            <dataDef name="CPProducts">
+                <dataDefData path="CPProducts/"/>
+            </dataDef>
+            <dataDef name="CPServices">
+                <dataDefData path="CPServices/"/>
+            </dataDef>
+            <dataDef name="CPAddresses">
+                <dataDefData path="CPAddresses/"/>
+            </dataDef>
+            <dataDef name="CPContacts">
+                <dataDefData path="CPContacts/"/>
+            </dataDef>
+            <dataDef name="CPAddlCP">
+                <dataDefData path="CPAddlCP/"/>
+            </dataDef>
+            <dataDef name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqGeneralClauseReference">
+                <dataDefData path="ReqGeneralClauseReference/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAuthoringDocument">
+                <dataDefData path="ReqAuthoringDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqDownloadDocument">
+                <dataDefData path="ReqDownloadDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAdHocTask">
+                <dataDefData path="ReqAdHocTask/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqReminder">
+                <dataDefData path="ReqReminder/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractEmail">
+                <dataDefData path="ReqContractEmail/"/>
+            </dataDef>
+            <dataDef name="ReqPROCCreateAdHocDocument">
+                <dataDefData path="ReqPROCCreateAdHocDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractStats">
+                <dataDefData path="ReqContractStats/"/>
+            </dataDef>
+        </dataDefList>
+        <dataDefList name="AssembleDataDefList">
+            <dataDef name="ReqPROCDetails">
+                <dataDefData path="ReqPROCDetails/"/>
+            </dataDef>
+            <dataDef name="ReqContractAttachment">
+                <dataDefData path="ReqContractAttachment/"/>
+            </dataDef>
+            <dataDef name="CPProducts">
+                <dataDefData path="CPProducts/"/>
+            </dataDef>
+            <dataDef name="CPServices">
+                <dataDefData path="CPServices/"/>
+            </dataDef>
+            <dataDef name="CPAddresses">
+                <dataDefData path="CPAddresses/"/>
+            </dataDef>
+            <dataDef name="CPContacts">
+                <dataDefData path="CPContacts/"/>
+            </dataDef>
+            <dataDef name="CPAddlCP">
+                <dataDefData path="CPAddlCP/"/>
+            </dataDef>
+            <dataDef name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqGeneralClauseReference">
+                <dataDefData path="ReqGeneralClauseReference/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAuthoringDocument">
+                <dataDefData path="ReqAuthoringDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqDownloadDocument">
+                <dataDefData path="ReqDownloadDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAdHocTask">
+                <dataDefData path="ReqAdHocTask/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqReminder">
+                <dataDefData path="ReqReminder/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractEmail">
+                <dataDefData path="ReqContractEmail/"/>
+            </dataDef>
+            <dataDef name="ReqPROCCreateAdHocDocument">
+                <dataDefData path="ReqPROCCreateAdHocDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractStats">
+                <dataDefData path="ReqContractStats/"/>
+            </dataDef>
+        </dataDefList>
+        <dataDefList name="CollaborateIntDataDefList">
+            <dataDef name="ReqPROCDetails">
+                <dataDefData path="ReqPROCDetails/"/>
+            </dataDef>
+            <dataDef name="ReqPROCReconciliation">
+                <dataDefData path="ReqPROCReconciliation/"/>
+            </dataDef>
+            <dataDef name="CPProducts">
+                <dataDefData path="CPProducts/"/>
+            </dataDef>
+            <dataDef name="CPServices">
+                <dataDefData path="CPServices/"/>
+            </dataDef>
+            <dataDef name="CPAddresses">
+                <dataDefData path="CPAddresses/"/>
+            </dataDef>
+            <dataDef name="CPContacts">
+                <dataDefData path="CPContacts/"/>
+            </dataDef>
+            <dataDef name="CPAddlCP">
+                <dataDefData path="CPAddlCP/"/>
+            </dataDef>
+            <dataDef name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqGeneralClauseReference">
+                <dataDefData path="ReqGeneralClauseReference/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAuthoringDocument">
+                <dataDefData path="ReqAuthoringDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqDownloadDocument">
+                <dataDefData path="ReqDownloadDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAdHocTask">
+                <dataDefData path="ReqAdHocTask/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqReminder">
+                <dataDefData path="ReqReminder/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractEmail">
+                <dataDefData path="ReqContractEmail/"/>
+            </dataDef>
+            <dataDef name="ReqPROCCreateAdHocDocument">
+                <dataDefData path="ReqPROCCreateAdHocDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractStats">
+                <dataDefData path="ReqContractStats/"/>
+            </dataDef>
+        </dataDefList>
+        <dataDefList name="CollaborateExtDataDefList">
+            <dataDef name="ReqPROCDetails">
+                <dataDefData path="ReqPROCDetails/"/>
+            </dataDef>
+            <dataDef name="ReqPROCReconciliation">
+                <dataDefData path="ReqPROCReconciliation/"/>
+            </dataDef>
+            <dataDef name="CPProducts">
+                <dataDefData path="CPProducts/"/>
+            </dataDef>
+            <dataDef name="CPServices">
+                <dataDefData path="CPServices/"/>
+            </dataDef>
+            <dataDef name="CPAddresses">
+                <dataDefData path="CPAddresses/"/>
+            </dataDef>
+            <dataDef name="CPContacts">
+                <dataDefData path="CPContacts/"/>
+            </dataDef>
+            <dataDef name="CPAddlCP">
+                <dataDefData path="CPAddlCP/"/>
+            </dataDef>
+            <dataDef name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqGeneralClauseReference">
+                <dataDefData path="ReqGeneralClauseReference/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAuthoringDocument">
+                <dataDefData path="ReqAuthoringDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqDownloadDocument">
+                <dataDefData path="ReqDownloadDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAdHocTask">
+                <dataDefData path="ReqAdHocTask/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqReminder">
+                <dataDefData path="ReqReminder/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractEmail">
+                <dataDefData path="ReqContractEmail/"/>
+            </dataDef>
+            <dataDef name="ReqPROCCreateAdHocDocument">
+                <dataDefData path="ReqPROCCreateAdHocDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractStats">
+                <dataDefData path="ReqContractStats/"/>
+            </dataDef>
+        </dataDefList>
+        <dataDefList name="ExecuteDataDefList">
+            <dataDef conditionRef="ReqSignature_Condition" name="ReqSignature">
+                <dataDefData path="ReqSignature/"/>
+            </dataDef>
+            <dataDef name="ReqPROCDetails">
+                <dataDefData path="ReqPROCDetails/"/>
+            </dataDef>
+            <dataDef name="CPProducts">
+                <dataDefData path="CPProducts/"/>
+            </dataDef>
+            <dataDef name="CPServices">
+                <dataDefData path="CPServices/"/>
+            </dataDef>
+            <dataDef name="CPAddresses">
+                <dataDefData path="CPAddresses/"/>
+            </dataDef>
+            <dataDef name="CPContacts">
+                <dataDefData path="CPContacts/"/>
+            </dataDef>
+            <dataDef name="CPAddlCP">
+                <dataDefData path="CPAddlCP/"/>
+            </dataDef>
+            <dataDef name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqGeneralClauseReference">
+                <dataDefData path="ReqGeneralClauseReference/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAuthoringDocument">
+                <dataDefData path="ReqAuthoringDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqDownloadDocument">
+                <dataDefData path="ReqDownloadDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAdHocTask">
+                <dataDefData path="ReqAdHocTask/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqReminder">
+                <dataDefData path="ReqReminder/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractEmail">
+                <dataDefData path="ReqContractEmail/"/>
+            </dataDef>
+            <dataDef name="ReqPROCCreateAdHocDocument">
+                <dataDefData path="ReqPROCCreateAdHocDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractStats">
+                <dataDefData path="ReqContractStats/"/>
+            </dataDef>
+        </dataDefList>
+        <dataDefList name="ManageDataDefList">
+            <dataDef name="ReqSignature">
+                <dataDefData path="ReqSignature/"/>
+            </dataDef>
+            <dataDef name="ReqPROCDetails">
+                <dataDefData path="ReqPROCDetails/"/>
+            </dataDef>
+            <dataDef name="CPProducts">
+                <dataDefData path="CPProducts/"/>
+            </dataDef>
+            <dataDef name="CPServices">
+                <dataDefData path="CPServices/"/>
+            </dataDef>
+            <dataDef name="CPAddresses">
+                <dataDefData path="CPAddresses/"/>
+            </dataDef>
+            <dataDef name="CPContacts">
+                <dataDefData path="CPContacts/"/>
+            </dataDef>
+            <dataDef name="CPAddlCP">
+                <dataDefData path="CPAddlCP/"/>
+            </dataDef>
+            <dataDef name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqGeneralClauseReference">
+                <dataDefData path="ReqGeneralClauseReference/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAuthoringDocument">
+                <dataDefData path="ReqAuthoringDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqDownloadDocument">
+                <dataDefData path="ReqDownloadDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqAdHocTask">
+                <dataDefData path="ReqAdHocTask/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqReminder">
+                <dataDefData path="ReqReminder/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractEmail">
+                <dataDefData path="ReqContractEmail/"/>
+            </dataDef>
+            <dataDef name="ReqPROCCreateAdHocDocument">
+                <dataDefData path="ReqPROCCreateAdHocDocument/"/>
+            </dataDef>
+            <dataDef resourceMode="true" name="ReqContractStats">
+                <dataDefData path="ReqContractStats/"/>
+            </dataDef>
+        </dataDefList>
+        <ns2:Conditions>
+            <ns2:ExecutionScript name="ReqSignature_Condition"/>
+        </ns2:Conditions>
+        <ns2:ECA task="RootTask/Request" event="TaskWFCreateContract">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskWFCreateContract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskViewed">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskComponentAdd">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskWFChangeParent">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Set/Change Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="RelatedWFCreate">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskCompleted">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Complete Stage" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskReassigned">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reassign" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskComponentDelete">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete Current Version" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="WFDelete">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="WFCreate">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Create" attribute="WFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Request" event="TaskPreviewContract">
+            <ns2:DataIn ref="RequestDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Preview" attribute="TaskPreviewContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskWFCreateContract">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskWFCreateContract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskSynchronizeTerms">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskSynchronizeTerms" attribute="TaskSynchronizeTerms"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskAuthUpload">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskAuthUpload" attribute="TaskAuthUpload"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskCheckIn">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCheckIn" attribute="TaskCheckIn"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskRemoveDraft">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskRemoveDraft" attribute="TaskRemoveDraft"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskCancelCheckOut">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCancelCheckOut" attribute="TaskCancelCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskCheckOut">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCheckOut" attribute="TaskCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskViewed">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskComponentAdd">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskWFChangeParent">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Set/Change Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="RelatedWFCreate">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskCompleted">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Complete Stage" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskReassigned">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reassign" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskComponentDelete">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete Current Version" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="WFDelete">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskRejected">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Previous Stage" attribute="TaskRejected"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskPreviewContract">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Preview" attribute="TaskPreviewContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskSelectTemplates">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Select Templates" attribute="TaskSelectTemplates"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Assemble" event="TaskGenerateDoc">
+            <ns2:DataIn ref="AssembleDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Generate" attribute="TaskGenerateDoc"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskWFCreateContract">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskWFCreateContract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskPreviewContract">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskPreviewContract" attribute="TaskPreviewContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskViewed">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskCompleted">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Complete Stage" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskComponentAdd">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskWFChangeParent">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Set/Change Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="RelatedWFCreate">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskReassigned">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reassign" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskComponentDelete">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete Current Version" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="WFDelete">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskRejected">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="PRevious Stage" attribute="TaskRejected"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskCheckOut">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Check Out" attribute="TaskCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskCancelCheckOut">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Cancel Check Out" attribute="TaskCancelCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskRemoveDraft">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Remove Draft" attribute="TaskRemoveDraft"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskCheckIn">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Check In" attribute="TaskCheckIn"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskAuthUpload">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Upload" attribute="TaskAuthUpload"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateInt" event="TaskSynchronizeTerms">
+            <ns2:DataIn ref="CollaborateIntDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Synchronize Terms" attribute="TaskSynchronizeTerms"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskWFCreateContract">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskWFCreateContract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskPreviewContract">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskPreviewContract" attribute="TaskPreviewContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskViewed">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskCompleted">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Complete Stage" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskComponentAdd">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskWFChangeParent">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Set/Change Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="RelatedWFCreate">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskReassigned">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reassign" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskComponentDelete">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete Current Version" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="WFDelete">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskRejected">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="PRevious Stage" attribute="TaskRejected"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskCheckOut">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Check Out" attribute="TaskCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskCancelCheckOut">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Cancel Check Out" attribute="TaskCancelCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskRemoveDraft">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Remove Draft" attribute="TaskRemoveDraft"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskCheckIn">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Check In" attribute="TaskCheckIn"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskAuthUpload">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Upload" attribute="TaskAuthUpload"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/CollaborateExt" event="TaskSynchronizeTerms">
+            <ns2:DataIn ref="CollaborateExtDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Synchronize Terms" attribute="TaskSynchronizeTerms"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskWFCreateContract">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskWFCreateContract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskPreviewContract">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskPreviewContract" attribute="TaskPreviewContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskSynchronizeTerms">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskSynchronizeTerms" attribute="TaskSynchronizeTerms"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskAuthUpload">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskAuthUpload" attribute="TaskAuthUpload"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskCheckIn">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCheckIn" attribute="TaskCheckIn"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskRemoveDraft">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskRemoveDraft" attribute="TaskRemoveDraft"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskCancelCheckOut">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCancelCheckOut" attribute="TaskCancelCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskCheckOut">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCheckOut" attribute="TaskCheckOut"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskViewed">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskCompleted">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Complete Stage" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskComponentAdd">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskWFChangeParent">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Set/Change Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="RelatedWFCreate">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskReassigned">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reassign" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskESignatureLaunch">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Launch eSignature" attribute="TaskESignatureLaunch"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskESignatureCancel">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Cancel eSignature" attribute="TaskESignatureCancel"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskESignatureHistory">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View History" attribute="TaskESignatureHistory"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskESignatureSelectDocs">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Select Documents" attribute="TaskESignatureSelectDocs"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskESignatureReset">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reset eSignature" attribute="TaskESignatureReset"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskESignatureCorrection">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="DocuSign Correct" attribute="TaskESignatureCorrection"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskComponentDelete">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete current version" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="WFDelete">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Execute" event="TaskRejected">
+            <ns2:DataIn ref="ExecuteDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Previous Stage" attribute="TaskRejected"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskCompleted">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCompleted" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskWFCreateContract">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskWFCreateContract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskWFChangeParent">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Set/Change Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="RelatedWFCreate">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskViewed">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskComponentAdd">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskReassigned">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Reassign" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskComponentDelete">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete current version" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="WFDelete">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskAuthAmendWF">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Amend" attribute="TaskAuthAmendWF"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:Privilege name="Viewer">
+            <ns2:ECARef name="RootTask/Request/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskViewed/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can View NDA Objects at all stages" value="View" attribute="Viewer"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditRequest">
+            <ns2:ECARef name="RootTask/Request/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/Request/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Request/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/Request/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/Request/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/Request/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/Request/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/Request/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/Request/WFDelete/"/>
+            <ns2:ECARef name="RootTask/Request/WFCreate/"/>
+            <ns2:ECARef name="RootTask/Request/TaskPreviewContract/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Procurement Objects in Request stage" value="Edit Request" attribute="EditRequest"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditAssemble">
+            <ns2:ECARef name="RootTask/Assemble/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskSynchronizeTerms/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskAuthUpload/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskCheckIn/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskRemoveDraft/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskCancelCheckOut/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskCheckOut/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/Assemble/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/Assemble/WFDelete/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskRejected/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskPreviewContract/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskSelectTemplates/"/>
+            <ns2:ECARef name="RootTask/Assemble/TaskGenerateDoc/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Procurement Objects in Assemble stage" value="Edit Assemble" attribute="EditAssemble"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditCollaborate">
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskPreviewContract/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/WFDelete/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskRejected/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskCheckOut/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskCancelCheckOut/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskRemoveDraft/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskCheckIn/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskAuthUpload/"/>
+            <ns2:ECARef name="RootTask/CollaborateInt/TaskSynchronizeTerms/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Procurement Objects in Collaborate stage" value="Edit Collaborate" attribute="EditCollaborate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditNegotiate">
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskPreviewContract/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/WFDelete/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskRejected/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskCheckOut/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskCancelCheckOut/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskRemoveDraft/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskCheckIn/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskAuthUpload/"/>
+            <ns2:ECARef name="RootTask/CollaborateExt/TaskSynchronizeTerms/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Procurement Objects in Negotiate stage" value="Edit Negotiate" attribute="EditNegotiate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditExecute">
+            <ns2:ECARef name="RootTask/Execute/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskPreviewContract/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskSynchronizeTerms/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskAuthUpload/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskCheckIn/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskRemoveDraft/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskCancelCheckOut/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskCheckOut/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/Execute/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskESignatureLaunch/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskESignatureCancel/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskESignatureHistory/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskESignatureSelectDocs/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskESignatureReset/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskESignatureCorrection/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/Execute/WFDelete/"/>
+            <ns2:ECARef name="RootTask/Execute/TaskRejected/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Procurement Objects in Execute stage" value="Edit Execute" attribute="EditExecute"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditManage">
+            <ns2:ECARef name="RootTask/Manage/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/Manage/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/Manage/WFDelete/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskAuthAmendWF/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Procurement Objects in Manage stage" value="Edit Manage" attribute="EditManage"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Procurement" attribute="PROCBO"/>
+                <ns2:LocalizedString value="Summary" attribute="ReqPROCDetails"/>
+                <ns2:LocalizedString value="Products" attribute="CPProducts"/>
+                <ns2:LocalizedString value="Services" attribute="CPServices"/>
+                <ns2:LocalizedString value="Addresses" attribute="CPAddresses"/>
+                <ns2:LocalizedString value="Contacts" attribute="CPContacts"/>
+                <ns2:LocalizedString value="AddL Counterparties" attribute="CPAddlCP"/>
+                <ns2:LocalizedString value="Attachments" attribute="ReqAttachment"/>
+                <ns2:LocalizedString value="All Terms And Clauses" attribute="ReqGeneralClauseReference"/>
+                <ns2:LocalizedString value="Authoring Document" attribute="ReqAuthoringDocument"/>
+                <ns2:LocalizedString value="Download Documents" attribute="ReqDownloadDocument"/>
+                <ns2:LocalizedString value="Comments" attribute="ReqAComment"/>
+                <ns2:LocalizedString value="Ad Hoc Tasks" attribute="ReqAdHocTask"/>
+                <ns2:LocalizedString value="Alerts" attribute="ReqReminder"/>
+                <ns2:LocalizedString value="Email Contract" attribute="ReqContractEmail"/>
+                <ns2:LocalizedString value="Create Ad Hoc Document" attribute="ReqPROCCreateAdHocDocument"/>
+                <ns2:LocalizedString value="Contract Cycle Time" attribute="ReqContractStats"/>
+                <ns2:LocalizedString value="Create Contract" attribute="ReqContractAttachment"/>
+                <ns2:LocalizedString value="Reconciliation" attribute="ReqPROCReconciliation"/>
+                <ns2:LocalizedString value="Signature" attribute="ReqSignature"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </BundleDefinition>
+</BundleDefinitions>

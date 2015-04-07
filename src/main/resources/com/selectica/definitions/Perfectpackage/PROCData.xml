@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template type="general" templateVersion="1.0" accountID="0.0" xmlns="http://selectica.com/internalmodel/data" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <module infoComponentRef="ReqPROCDetails" type="PROCData" name="PROCData">
+        <component max="1" min="1" ref="PROCDetails" name="ReqPROCDetails"/>
+        <component max="*" min="0" ref="PROCCPProducts" name="CPProducts"/>
+        <component max="*" min="0" ref="PROCCPServices" name="CPServices"/>
+        <component max="*" min="0" ref="PROCCPAddresses" name="CPAddresses"/>
+        <component max="*" min="0" ref="PROCCPContacts" name="CPContacts"/>
+        <component max="*" min="0" ref="PROCCPAddlCP" name="CPAddlCP"/>
+        <component max="1" min="1" ref="Signature" name="ReqSignature"/>
+        <component max="*" min="0" ref="ContractAttachment" name="ReqContractAttachment"/>
+        <component max="*" min="0" ref="Attachment" name="ReqAttachment"/>
+        <component max="*" min="0" ref="GeneralClauseReference" name="ReqGeneralClauseReference"/>
+        <component max="*" min="0" ref="AuthoringDocument" name="ReqAuthoringDocument"/>
+        <component max="*" min="0" ref="DownloadDocument" name="ReqDownloadDocument"/>
+        <component max="*" min="0" ref="AComment" name="ReqAComment"/>
+        <component max="*" min="0" ref="AdHocTask" name="ReqAdHocTask"/>
+        <component max="*" min="0" ref="Reminder" name="ReqReminder"/>
+        <component max="*" min="0" ref="ContractEmail" name="ReqContractEmail"/>
+        <component max="1" min="0" ref="ContractStats" name="ReqContractStats"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Procurement" attribute="PROCData"/>
+                <ns2:LocalizedString value="Summary" attribute="ReqPROCDetails"/>
+                <ns2:LocalizedString value="Products" attribute="CPProducts"/>
+                <ns2:LocalizedString value="Services" attribute="CPServices"/>
+                <ns2:LocalizedString value="Addresses" attribute="CPAddresses"/>
+                <ns2:LocalizedString value="Contacts" attribute="CPContacts"/>
+                <ns2:LocalizedString value="Addl Counterparties" attribute="CPAddlCP"/>
+                <ns2:LocalizedString value="Signature" attribute="ReqSignature"/>
+                <ns2:LocalizedString value="Create Contract" attribute="ReqContractAttachment"/>
+                <ns2:LocalizedString value="Attachments" attribute="ReqAttachment"/>
+                <ns2:LocalizedString value="All Terms and Clauses" attribute="ReqGeneralClauseReference"/>
+                <ns2:LocalizedString value="Authoring Document" attribute="ReqAuthoringDocument"/>
+                <ns2:LocalizedString value="Download Documents" attribute="ReqDownloadDocument"/>
+                <ns2:LocalizedString value="Comments" attribute="ReqAComment"/>
+                <ns2:LocalizedString value="Ad Hoc Tasks" attribute="ReqAdHocTask"/>
+                <ns2:LocalizedString value="Alerts" attribute="ReqReminder"/>
+                <ns2:LocalizedString value="Email Contract" attribute="ReqContractEmail"/>
+                <ns2:LocalizedString value="Contract Cycle Time" attribute="ReqContractStats"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </module>
+    <componentDef xmlVersion="" tableName="CONTRACT1" type="PROCDetails" extends="InfoComponent" name="PROCDetails">
+        <param readonly="true" valuePath="bundle/bundleTrackingNum" ref="sysInteger" name="trackingNumber"/>
+        <param readonly="true" ref="genericString" isHeader="true" name="name"/>
+        <param ref="genericString" isHeader="true" name="contractName"/>
+        <param wContractInfo="true" mergeable="false" isImportDisplay="false" editable="false" defaultValue="Draft" ref="Contract Status List" isHeader="true" name="contractStatus"/>
+        <param ref="standardGroupValueList" name="bussUnit"/>
+        <param wContractInfo="true" required="true" observed="true" ref="Proc Type List" isHeader="true" name="agrType"/>
+        <param ref="Agreement Category List" name="agrCat"/>
+        <param wContractInfo="true" isRequiredScript="requestor_Required" ref="cmUserNameList" name="requestor"/>
+        <param ref="modernDate" name="reqDate"/>
+        <param ref="entityList" name="entity"/>
+        <param wContractInfo="true" hideUpdateIndicator="true" isRequiredScript="cpName_Required" required="true" ref="Counterparty Name List" isHeader="true" name="cpName"/>
+        <param ref="entityTypeList" name="entityType"/>
+        <param readonly="true" ref="genericString" name="cpAdr1"/>
+        <param readonly="true" ref="genericString" name="cpAdr2"/>
+        <param readonly="true" ref="genericString" name="cpCity"/>
+        <param readonly="true" ref="genericString" name="cpState"/>
+        <param readonly="true" ref="genericString" name="cpZip"/>
+        <param readonly="true" ref="genericString" name="cpCtry"/>
+        <param defaultValue="No" ref="yesNoRadioButtons" name="addlVendors"/>
+        <param ref="usStatesList" name="govLaw"/>
+        <param wContractInfo="true" hideUpdateIndicator="true" required="true" ref="modernDate" name="startDate"/>
+        <param hideUpdateIndicator="true" required="true" ref="termTypeList" name="termType"/>
+        <param hideUpdateIndicator="true" required="true" fieldWidth="40" ref="sysInteger" isSlider="true" name="term"/>
+        <param wContractInfo="true" readonly="true" ref="modernDate" isHeader="true" name="endDate"/>
+        <param readonly="true" visible="false" ref="modernDate" name="lastNotificationDate"/>
+        <param hideUpdateIndicator="true" ref="yesNoRadioButtons" name="autoRenewal"/>
+        <param ref="sysInteger" name="autoRenewalTerm"/>
+        <param hideUpdateIndicator="true" isRequiredScript="renNoticePer_Required" ref="sysInteger" name="renNoticePer"/>
+        <param readonly="true" ref="modernDate" isHeader="true" name="renNoticeDate"/>
+        <param readonly="true" ref="genericString" isHeader="true" name="renewed"/>
+        <param hideUpdateIndicator="true" ref="yesNoRadioButtons" name="termwoCause"/>
+        <param hideUpdateIndicator="true" ref="sysInteger" name="termNotice"/>
+        <param readonly="true" ref="modernDate" isHeader="true" name="termNoticeModerndate"/>
+        <param ref="commentString" name="termComm"/>
+        <param ref="commentString" name="descPS"/>
+        <param readonly="true" defaultValue="0.0" decimalPrecision="2" ref="genericDouble" isHeader="true" name="prdTotal"/>
+        <param readonly="true" defaultValue="0.0" decimalPrecision="2" ref="genericDouble" isHeader="true" name="serTotal"/>
+        <param readonly="true" defaultValue="0.0" decimalPrecision="2" ref="genericDouble" isHeader="true" name="totalAmt"/>
+        <param wContractInfo="true" ref="yesNoRadioButtons" name="thirdParty1"/>
+        <param readonly="false" ref="yesNoRadioButtons" name="intCollReq"/>
+        <param ref="genericString" name="contractTypeName"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Summary" attribute="PROCDetails"/>
+                <ns2:LocalizedString value="Tracking #" attribute="trackingNumber"/>
+                <ns2:LocalizedString value="Contract ID" attribute="name"/>
+                <ns2:LocalizedString value="Contract Name" attribute="contractName"/>
+                <ns2:LocalizedString value="Contract Status" attribute="contractStatus"/>
+                <ns2:LocalizedString value="Business Unit" attribute="bussUnit"/>
+                <ns2:LocalizedString value="Agreement Type" attribute="agrType"/>
+                <ns2:LocalizedString value="Agreement Category" attribute="agrCat"/>
+                <ns2:LocalizedString value="Requestor" attribute="requestor"/>
+                <ns2:LocalizedString value="Request date" attribute="reqDate"/>
+                <ns2:LocalizedString value="Legal Entity" attribute="entity"/>
+                <ns2:LocalizedString value="Counterparty Name" attribute="cpName"/>
+                <ns2:LocalizedString value="Type of Entity" attribute="entityType"/>
+                <ns2:LocalizedString value="Counterparty Address 1" attribute="cpAdr1"/>
+                <ns2:LocalizedString value="Counterparty Address 2" attribute="cpAdr2"/>
+                <ns2:LocalizedString value="Counterparty City" attribute="cpCity"/>
+                <ns2:LocalizedString value="Counterparty State" attribute="cpState"/>
+                <ns2:LocalizedString value="Counterparty Zip/Postal Code" attribute="cpZip"/>
+                <ns2:LocalizedString value="Counterparty Country" attribute="cpCtry"/>
+                <ns2:LocalizedString value="Are there additional counterparties?" attribute="addlVendors"/>
+                <ns2:LocalizedString value="Governing Law" attribute="govLaw"/>
+                <ns2:LocalizedString value="Effective Date" attribute="startDate"/>
+                <ns2:LocalizedString value="Term Type" attribute="termType"/>
+                <ns2:LocalizedString value="Term" attribute="term"/>
+                <ns2:LocalizedString value="Expiration Date" attribute="endDate"/>
+                <ns2:LocalizedString value="Last Notification Date" attribute="lastNotificationDate"/>
+                <ns2:LocalizedString value="Auto renewal" attribute="autoRenewal"/>
+                <ns2:LocalizedString value="Auto renewal Term" attribute="autoRenewalTerm"/>
+                <ns2:LocalizedString value="Renewal Notice Period" attribute="renNoticePer"/>
+                <ns2:LocalizedString value="Renewal Notice Date" attribute="renNoticeDate"/>
+                <ns2:LocalizedString value="Renewed?" attribute="renewed"/>
+                <ns2:LocalizedString value="Termination without cause" attribute="termwoCause"/>
+                <ns2:LocalizedString value="Termination notice" attribute="termNotice"/>
+                <ns2:LocalizedString value="Termination notice Modern date" attribute="termNoticeModerndate"/>
+                <ns2:LocalizedString value="Term/Renewal Comments" attribute="termComm"/>
+                <ns2:LocalizedString value="Description of Products or Services" attribute="descPS"/>
+                <ns2:LocalizedString value="Subtotal of Products" attribute="prdTotal"/>
+                <ns2:LocalizedString value="Subtotal of Services" attribute="serTotal"/>
+                <ns2:LocalizedString value="Total Contract Amount" attribute="totalAmt"/>
+                <ns2:LocalizedString value="Is this counterparty paper?" attribute="thirdParty1"/>
+                <ns2:LocalizedString value="Is internal collaboration required?" attribute="intCollReq"/>
+                <ns2:LocalizedString value="PROC-" attribute="contractTypeName"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnChangeTrigger_AgrTypeIsNotMaster" name="OnChangeTrigger_AgrTypeIsNotMaster"/>
+        <ns2:ExecutionScript name="requestor_Required"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnChangeTrigger_SetCPDetails" name="OnChangeTrigger_SetCPDetails"/>
+        <ns2:ExecutionScript name="cpName_Required"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnChangeTrigger_SetEndDate" name="OnChangeTrigger_SetEndDate"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnChangeTrigger_SetTermDate" name="OnChangeTrigger_SetTermDate"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnChangeTrigger_SetRenDate" name="OnChangeTrigger_SetRenDate"/>
+        <ns2:ExecutionScript name="renNoticePer_Required"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnChangeTrigger_SetTermNotice" name="OnChangeTrigger_SetTermNotice"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnSaveTrigger" name="OnSaveTrigger"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCDetails.OnCreateTrigger" name="OnCreateTrigger"/>
+        <componentAction observing="agrType" trigger="ONCHANGE" scriptRef="OnChangeTrigger_AgrTypeIsNotMaster"/>
+        <componentAction observing="cpName" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetCPDetails"/>
+        <componentAction observing="startDate, termType, term" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetEndDate"/>
+        <componentAction observing="startDate, termType, term, termwoCause, termNotice" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetTermDate"/>
+        <componentAction observing="termType, term, autoRenewal, renNoticePer" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetRenDate"/>
+        <componentAction observing="termwoCause" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetTermNotice"/>
+        <componentAction trigger="SAVE" scriptRef="OnSaveTrigger"/>
+        <componentAction trigger="CREATE" scriptRef="OnCreateTrigger"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="PROCProducts">
+        <param ref="genericString" isHeader="true" name="prdItCode"/>
+        <param ref="genericString" isHeader="true" name="prdItDesc"/>
+        <param hideUpdateIndicator="true" min="0" ref="sysInteger" isHeader="true" name="prdQty"/>
+        <param ref="Unit of Measure List" name="prdUnitMeasure"/>
+        <param hideUpdateIndicator="true" min="0" decimalPrecision="2" ref="genericDouble" name="prdPricePU"/>
+        <param hideUpdateIndicator="true" min="0" decimalPrecision="2" ref="sysInteger" name="prdDiscount"/>
+        <param readonly="true" decimalPrecision="2" ref="genericDouble" isHeader="true" name="prdSubTotal"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Products" attribute="PROCProducts"/>
+                <ns2:LocalizedString value="Item Code" attribute="prdItCode"/>
+                <ns2:LocalizedString value="Item Description" attribute="prdItDesc"/>
+                <ns2:LocalizedString value="System integer" attribute="prdQty"/>
+                <ns2:LocalizedString value="Unit of Measure" attribute="prdUnitMeasure"/>
+                <ns2:LocalizedString value="Price (per unit) $" attribute="prdPricePU"/>
+                <ns2:LocalizedString value="Discount %" attribute="prdDiscount"/>
+                <ns2:LocalizedString value="Sub Total $" attribute="prdSubTotal"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCProducts.OnChangeTrigger_SetSubTotal" name="OnChangeTrigger_SetSubTotal"/>
+        <componentAction observing="prdPricePU, prdDiscount, prdSubTotal" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetSubTotal"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="PROCServices">
+        <param ref="genericString" isHeader="true" name="serName"/>
+        <param ref="commentString" name="serDesc"/>
+        <param hideUpdateIndicator="true" min="0" ref="sysInteger" isHeader="true" name="serQty"/>
+        <param ref="Unit of Measure List" name="serUnitMeasure"/>
+        <param hideUpdateIndicator="true" min="0" decimalPrecision="2" ref="genericDouble" name="serPricePU"/>
+        <param hideUpdateIndicator="true" min="0" decimalPrecision="2" ref="sysInteger" name="serDiscount"/>
+        <param hideUpdateIndicator="true" readonly="true" min="0" decimalPrecision="2" ref="genericDouble" isHeader="true" name="serSubTotal"/>
+        <param ref="modernDate" name="serSerDate"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Services" attribute="PROCServices"/>
+                <ns2:LocalizedString value="Service Name" attribute="serName"/>
+                <ns2:LocalizedString value="Service Description" attribute="serDesc"/>
+                <ns2:LocalizedString value="System integer" attribute="serQty"/>
+                <ns2:LocalizedString value="Unit of Measure" attribute="serUnitMeasure"/>
+                <ns2:LocalizedString value="Price (per unit) $" attribute="serPricePU"/>
+                <ns2:LocalizedString value="Discount %" attribute="serDiscount"/>
+                <ns2:LocalizedString value="Sub Total $" attribute="serSubTotal"/>
+                <ns2:LocalizedString value="Service Date" attribute="serSerDate"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.PROC.PROCServices.OnChangeTrigger_SetSubTotal" name="OnChangeTrigger_SetSubTotal"/>
+        <componentAction observing="serPricePU, serDiscount, serSubTotal" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetSubTotal"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="PROCAddresses">
+        <param required="true" ref="Address Type List" isHeader="true" name="cadrType"/>
+        <param required="true" ref="genericString" isHeader="true" name="cadr1"/>
+        <param ref="genericString" name="cadr2"/>
+        <param ref="genericString" name="cadrCity"/>
+        <param ref="usStatesList" name="cadrState"/>
+        <param ref="genericString" name="cadrZip"/>
+        <param ref="countryList" name="cadrCtry"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Addresses" attribute="PROCAddresses"/>
+                <ns2:LocalizedString value="Address Type" attribute="cadrType"/>
+                <ns2:LocalizedString value="Address Line 1" attribute="cadr1"/>
+                <ns2:LocalizedString value="Address Line 2" attribute="cadr2"/>
+                <ns2:LocalizedString value="City" attribute="cadrCity"/>
+                <ns2:LocalizedString value="State/Province" attribute="cadrState"/>
+                <ns2:LocalizedString value="Zip/Postal Code" attribute="cadrZip"/>
+                <ns2:LocalizedString value="Country" attribute="cadrCtry"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="PROCContacts">
+        <param required="true" ref="genericString" isHeader="true" name="contFN"/>
+        <param ref="genericString" name="contLN"/>
+        <param ref="genericString" name="contTitle"/>
+        <param ref="genericString" name="contPh"/>
+        <param ref="genericString" name="contMPh"/>
+        <param ref="email" name="contEmail"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Contacts" attribute="PROCContacts"/>
+                <ns2:LocalizedString value="Contact First Name" attribute="contFN"/>
+                <ns2:LocalizedString value="Contact Last Name" attribute="contLN"/>
+                <ns2:LocalizedString value="Contact Job Title" attribute="contTitle"/>
+                <ns2:LocalizedString value="Contact Phone" attribute="contPh"/>
+                <ns2:LocalizedString value="Contact Mobile Phone" attribute="contMPh"/>
+                <ns2:LocalizedString value="Contact Email" attribute="contEmail"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="PROCAddlCounterparties">
+        <param ref="genericString" name="acpName"/>
+        <param ref="entityTypeList" name="acpEntityType"/>
+        <param ref="genericString" name="acpAdr1"/>
+        <param ref="genericString" name="acpAdr2"/>
+        <param ref="genericString" name="acpCity"/>
+        <param ref="usStatesList" name="acpState"/>
+        <param ref="genericString" name="acpZip"/>
+        <param ref="countryList" name="acpCtry"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Addl Counterparties" attribute="PROCAddlCounterparties"/>
+                <ns2:LocalizedString value="Counterparty Name" attribute="acpName"/>
+                <ns2:LocalizedString value="Type of Entity" attribute="acpEntityType"/>
+                <ns2:LocalizedString value="Counterparty Address 1" attribute="acpAdr1"/>
+                <ns2:LocalizedString value="Counterparty Address 2" attribute="acpAdr2"/>
+                <ns2:LocalizedString value="Counterparty City" attribute="acpCity"/>
+                <ns2:LocalizedString value="Counterparty State" attribute="acpState"/>
+                <ns2:LocalizedString value="Counterparty Zip/Postal Code" attribute="acpZip"/>
+                <ns2:LocalizedString value="Counterparty Country" attribute="acpCtry"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="pcontStatusList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Draft"/>
+            <possibleValue ref="Awaiting Signature"/>
+            <possibleValue ref="Active"/>
+            <possibleValue ref="Terminated"/>
+            <possibleValue ref="Expired"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Contract Status List" attribute="pcontStatusList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Draft" attribute="Draft"/>
+                <ns2:LocalizedString value="Awaiting Signature" attribute="Awaiting Signature"/>
+                <ns2:LocalizedString value="Active" attribute="Active"/>
+                <ns2:LocalizedString value="Terminated" attribute="Terminated"/>
+                <ns2:LocalizedString value="Expired" attribute="Expired"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="lbo" maxlength="255" ref="enum:string" name="pcpNameList">
+        <dynamicValueList columns="name" displayChild="name" pageSize="10" cache="true" pathDef="DVendorBO/" xpathprocessor="jaxen" path="/bundles/DVendorBO/*[dirStatus/internal = 'Active']"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Counterparty Name List" attribute="pcpNameList"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef maxlength="255" ref="enum:string" name="pagrTypeList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Master"/>
+            <possibleValue ref="Sub Agreement"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Proc Type List" attribute="pagrTypeList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Master" attribute="Master"/>
+                <ns2:LocalizedString value="Sub Agreement" attribute="Sub Agreement"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="checkbox" maxlength="255" ref="enum:string" name="pagrCatList">
+        <possibleValueList>
+            <possibleValue ref="Products"/>
+            <possibleValue ref="Services"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Agreement Category List" attribute="pagrCatList"/>
+                <ns2:LocalizedString value="Products" attribute="Products"/>
+                <ns2:LocalizedString value="Services" attribute="Services"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="pprdUnitMeasureList">
+        <possibleValueList>
+            <possibleValue ref="Unit 1"/>
+            <possibleValue ref="Unit 2"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Unit of Measure List" attribute="pprdUnitMeasureList"/>
+                <ns2:LocalizedString value="Unit 1" attribute="Unit 1"/>
+                <ns2:LocalizedString value="Unit 2" attribute="Unit 2"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="pserUnitMeasureList">
+        <possibleValueList>
+            <possibleValue ref="Unit 1"/>
+            <possibleValue ref="Unit 2"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Unit of Measure List" attribute="pserUnitMeasureList"/>
+                <ns2:LocalizedString value="Unit 1" attribute="Unit 1"/>
+                <ns2:LocalizedString value="Unit 2" attribute="Unit 2"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="cpradrTypeList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Legal Entity"/>
+            <possibleValue ref="Notices"/>
+            <possibleValue ref="Ship To"/>
+            <possibleValue ref="Bill To"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Address Type List" attribute="cpradrTypeList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Legal Entity" attribute="Legal Entity"/>
+                <ns2:LocalizedString value="Notices" attribute="Notices"/>
+                <ns2:LocalizedString value="Ship To" attribute="Ship To"/>
+                <ns2:LocalizedString value="Bill To" attribute="Bill To"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+</template>

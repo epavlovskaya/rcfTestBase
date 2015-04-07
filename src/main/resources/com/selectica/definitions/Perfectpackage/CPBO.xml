@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BundleDefinitions xmlns="http://selectica.com/internalmodel/BundleDefinition" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <BundleDefinition status="Active" usageType="Directory" workflow="MANAGE_WF" module="CPData" name="CPBO">
+        <dataDefList name="ManageDataDefList">
+            <dataDef name="ReqCPDetails">
+                <dataDefData path="ReqCPDetails/"/>
+            </dataDef>
+            <dataDef displayComponentNum="false" name="ReqDCPDBA">
+                <dataDefData path="ReqDCPDBA/"/>
+            </dataDef>
+            <dataDef displayComponentNum="false" name="ReqCPAdditionalAddresses">
+                <dataDefData path="ReqCPAdditionalAddresses/"/>
+            </dataDef>
+            <dataDef displayComponentNum="false" name="ReqAttachment">
+                <dataDefData path="ReqAttachment/"/>
+            </dataDef>
+            <dataDef displayComponentNum="false" name="ReqContact">
+                <dataDefData path="ReqContact/"/>
+            </dataDef>
+            <dataDef displayComponentNum="false" resourceMode="true" name="ReqAComment">
+                <dataDefData path="ReqAComment/"/>
+            </dataDef>
+        </dataDefList>
+        <ns2:ECA task="RootTask/Manage" event="TaskPreviewContract">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskPreviewContract" attribute="TaskPreviewContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskCompleted">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskCompleted" attribute="TaskCompleted"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskReassigned">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskReassigned" attribute="TaskReassigned"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskAuthAmendWF">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="TaskAuthAmendWF" attribute="TaskAuthAmendWF"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskViewed">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="View" attribute="TaskViewed"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskComponentAdd">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Next Page" attribute="TaskComponentAdd"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskWFCreateContract">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Create Contract" attribute="TaskWFCreateContract"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskComponentDelete">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="TaskComponentDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="WFDelete">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Delete" attribute="WFDelete"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="RelatedWFCreate">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Sub" attribute="RelatedWFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="TaskWFChangeParent">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Add Parent" attribute="TaskWFChangeParent"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:ECA task="RootTask/Manage" event="WFCreate">
+            <ns2:DataIn ref="ManageDataDefList"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString value="Create" attribute="WFCreate"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:ECA>
+        <ns2:Privilege name="Viewer">
+            <ns2:ECARef name="RootTask/Manage/TaskViewed/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can View NDA Objects at all stages" value="View" attribute="Viewer"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:Privilege name="EditManage">
+            <ns2:ECARef name="RootTask/Manage/TaskPreviewContract/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskCompleted/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskReassigned/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskAuthAmendWF/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskViewed/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskComponentAdd/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskWFCreateContract/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskComponentDelete/"/>
+            <ns2:ECARef name="RootTask/Manage/WFDelete/"/>
+            <ns2:ECARef name="RootTask/Manage/RelatedWFCreate/"/>
+            <ns2:ECARef name="RootTask/Manage/TaskWFChangeParent/"/>
+            <ns2:ECARef name="RootTask/Manage/WFCreate/"/>
+            <ns2:display>
+                <ns2:LocaleSet locale="en">
+                    <ns2:LocalizedString helpinfo="Can Add/Edit Counterparty Objects in Manage stage" value="Edit Manage" attribute="EditManage"/>
+                </ns2:LocaleSet>
+            </ns2:display>
+        </ns2:Privilege>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Counterparty" attribute="CPBO"/>
+                <ns2:LocalizedString value="Summary" attribute="ReqCPDetails"/>
+                <ns2:LocalizedString value="DBA Details" attribute="ReqDCPDBA"/>
+                <ns2:LocalizedString value="Additional Addresses" attribute="ReqCPAdditionalAddresses"/>
+                <ns2:LocalizedString value="Attachments" attribute="ReqAttachment"/>
+                <ns2:LocalizedString value="Counterparty Contact" attribute="ReqContact"/>
+                <ns2:LocalizedString value="Comments" attribute="ReqAComment"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </BundleDefinition>
+</BundleDefinitions>

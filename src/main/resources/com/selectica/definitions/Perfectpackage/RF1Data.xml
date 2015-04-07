@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template type="general" templateVersion="1.0" accountID="0.0" xmlns="http://selectica.com/internalmodel/data" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <module infoComponentRef="ReqRF1Details" type="RF1Data" name="RF1Data">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Framework1" attribute="RF1Data"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </module>
+</template>

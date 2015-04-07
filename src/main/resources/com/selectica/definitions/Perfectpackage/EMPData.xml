@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template type="general" templateVersion="1.0" accountID="0.0" xmlns="http://selectica.com/internalmodel/data" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <module infoComponentRef="ReqEMPDetails" type="EMPData" name="EMPData">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Employment" attribute="EMPData"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </module>
+</template>

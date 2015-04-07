@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template type="general" templateVersion="1.0" accountID="0.0" xmlns="http://selectica.com/internalmodel/data" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <module infoComponentRef="ReqGENDetails" type="GENData" name="GENData">
+        <component max="1" min="1" ref="GENDetails" name="ReqGENDetails"/>
+        <component max="1" min="1" ref="Signature" name="ReqSignature"/>
+        <component max="*" min="0" ref="ContractAttachment" name="ReqContractAttachment"/>
+        <component max="*" min="0" ref="GENAddresses" name="ReqGENAddresses"/>
+        <component max="*" min="0" ref="GENContacts" name="ReqGENContacts"/>
+        <component max="*" min="0" ref="GENExhibits" name="ReqGENExhibits"/>
+        <component max="*" min="0" ref="Attachment" name="ReqAttachment"/>
+        <component max="*" min="0" ref="GeneralClauseReference" name="ReqGeneralClauseReference"/>
+        <component max="*" min="0" ref="DownloadDocument" name="ReqDownloadDocument"/>
+        <component max="*" min="0" ref="AComment" name="ReqAComment"/>
+        <component max="*" min="0" ref="AdHocTask" name="ReqAdHocTask"/>
+        <component max="*" min="0" ref="Reminder" name="ReqReminder"/>
+        <component max="*" min="0" ref="ContractEmail" name="ReqContractEmail"/>
+        <component max="1" min="0" ref="ContractStats" name="ReqContractStats"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="General" attribute="GENData"/>
+                <ns2:LocalizedString value="Summary" attribute="ReqGENDetails"/>
+                <ns2:LocalizedString value="Signature" attribute="ReqSignature"/>
+                <ns2:LocalizedString value="Create Contract" attribute="ReqContractAttachment"/>
+                <ns2:LocalizedString value="Addresses" attribute="ReqGENAddresses"/>
+                <ns2:LocalizedString value="Contacts" attribute="ReqGENContacts"/>
+                <ns2:LocalizedString value="Exhibits" attribute="ReqGENExhibits"/>
+                <ns2:LocalizedString value="Attachments" attribute="ReqAttachment"/>
+                <ns2:LocalizedString value="All Terms And Clauses" attribute="ReqGeneralClauseReference"/>
+                <ns2:LocalizedString value="Download Documents" attribute="ReqDownloadDocument"/>
+                <ns2:LocalizedString value="Comments" attribute="ReqAComment"/>
+                <ns2:LocalizedString value="Ad Hoc Tasks" attribute="ReqAdHocTask"/>
+                <ns2:LocalizedString value="Alerts" attribute="ReqReminder"/>
+                <ns2:LocalizedString value="Email Contract" attribute="ReqContractEmail"/>
+                <ns2:LocalizedString value="Contract Cycle Time" attribute="ReqContractStats"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </module>
+    <componentDef xmlVersion="" tableName="CONTRACT1" type="GENDetails" extends="InfoComponent" name="GENDetails">
+        <param readonly="true" valuePath="bundle/bundleTrackingNum" ref="sysInteger" name="trackingNumber"/>
+        <param wContractId="true" readonly="true" ref="genericString" isHeader="true" name="name"/>
+        <param ref="genericString" isHeader="true" name="contractName"/>
+        <param wContractId="true" mergeable="false" isImportDisplay="false" editable="false" defaultValue="Draft" ref="Contract Status List" isHeader="true" name="contractStatus"/>
+        <param ref="standardGroupValueList" name="bussUnit"/>
+        <param wContractInfo="true" hideUpdateIndicator="true" required="true" observed="true" ref="Agreement Type List" isHeader="true" name="agrType"/>
+        <param wContractInfo="true" defaultValueScript="requestor_DefaultValue" ref="cmUserNameList" name="requestor"/>
+        <param ref="modernDate" name="reqDate"/>
+        <param ref="entityList" name="entity"/>
+        <param wContractInfo="true" hideUpdateIndicator="true" required="true" ref="Counterparty Name List" isHeader="true" name="cpName"/>
+        <param ref="entityTypeList" name="entityType"/>
+        <param readonly="true" ref="genericString" name="cpAdr1"/>
+        <param readonly="true" ref="genericString" name="cpAdr2"/>
+        <param readonly="true" ref="genericString" name="cpCity"/>
+        <param readonly="true" ref="genericString" name="cpState"/>
+        <param readonly="true" ref="genericString" name="cpZip"/>
+        <param readonly="true" ref="genericString" name="cpCtry"/>
+        <param ref="usStatesList" name="govLaw"/>
+        <param wContractInfo="true" hideUpdateIndicator="true" isActualDate="true" required="true" ref="modernDate" name="startDate"/>
+        <param hideUpdateIndicator="true" required="true" ref="termTypeList" name="termType"/>
+        <param hideUpdateIndicator="true" required="true" fieldWidth="40" ref="sysInteger" isSlider="true" name="term"/>
+        <param wContractInfo="true" readonly="true" ref="modernDate" isHeader="true" name="endDate"/>
+        <param readonly="true" visible="false" ref="modernDate" name="lastNotificationDate"/>
+        <param observed="true" ref="yesNoRadioButtons" name="autoRenewal"/>
+        <param ref="sysInteger" name="autoRenewalTerm"/>
+        <param hideUpdateIndicator="true" ref="sysInteger" name="renNoticePer"/>
+        <param readonly="true" ref="modernDate" isHeader="true" name="renNoticeDate"/>
+        <param readonly="true" ref="genericString" isHeader="true" name="renewed"/>
+        <param wContractInfo="true" isReadOnlyScript="thirdParty1_ReadOnly" defaultValue="No" ref="yesNoRadioButtons" name="thirdParty1"/>
+        <param readonly="true" ref="genericString" name="contractTypeName"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Summary" attribute="GENDetails"/>
+                <ns2:LocalizedString value="Tracking #" attribute="trackingNumber"/>
+                <ns2:LocalizedString value="Contract ID" attribute="name"/>
+                <ns2:LocalizedString value="Contract Name" attribute="contractName"/>
+                <ns2:LocalizedString value="Contract Status" attribute="contractStatus"/>
+                <ns2:LocalizedString value="Business Unit" attribute="bussUnit"/>
+                <ns2:LocalizedString value="Agreement Type" attribute="agrType"/>
+                <ns2:LocalizedString value="Requestor" attribute="requestor"/>
+                <ns2:LocalizedString value="Request Date" attribute="reqDate"/>
+                <ns2:LocalizedString value="Legal Entity" attribute="entity"/>
+                <ns2:LocalizedString value="Counterparty Name" attribute="cpName"/>
+                <ns2:LocalizedString value="Type of Entity" attribute="entityType"/>
+                <ns2:LocalizedString value="Counterparty Address 1" attribute="cpAdr1"/>
+                <ns2:LocalizedString value="Counterparty Address 2" attribute="cpAdr2"/>
+                <ns2:LocalizedString value="Counterparty City" attribute="cpCity"/>
+                <ns2:LocalizedString value="Counterparty State" attribute="cpState"/>
+                <ns2:LocalizedString value="Counterparty Zip/Postal Code" attribute="cpZip"/>
+                <ns2:LocalizedString value="Counterparty Country" attribute="cpCtry"/>
+                <ns2:LocalizedString value="Governing Law" attribute="govLaw"/>
+                <ns2:LocalizedString value="Effective Date" attribute="startDate"/>
+                <ns2:LocalizedString value="Term Type" attribute="termType"/>
+                <ns2:LocalizedString value="Term" attribute="term"/>
+                <ns2:LocalizedString value="Expiration Date" attribute="endDate"/>
+                <ns2:LocalizedString value="Last Notification Date" attribute="lastNotificationDate"/>
+                <ns2:LocalizedString value="Auto renewal" attribute="autoRenewal"/>
+                <ns2:LocalizedString value="Auto renewal Term" attribute="autoRenewalTerm"/>
+                <ns2:LocalizedString value="Renewal Notice Period" attribute="renNoticePer"/>
+                <ns2:LocalizedString value="Renewal Notice Date" attribute="renNoticeDate"/>
+                <ns2:LocalizedString value="Renewed?" attribute="renewed"/>
+                <ns2:LocalizedString value="Is this counterparty paper?" attribute="thirdParty1"/>
+                <ns2:LocalizedString value="GEN-" attribute="contractTypeName"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnChangeTrigger_UnSetCPName" name="OnChangeTrigger_UnSetCPName"/>
+        <ns2:ExecutionScript name="requestor_DefaultValue"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnChangeTrigger_SetCPDetails" name="OnChangeTrigger_SetCPDetails"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnValidateTrigger_importValidateCpName" name="OnValidateTrigger_importValidateCpName"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnChangeTrigger_SetEndDate" name="OnChangeTrigger_SetEndDate"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnChangeTrigger_SetTermDate" name="OnChangeTrigger_SetTermDate"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnChangeTrigger_SetRenDate" name="OnChangeTrigger_SetRenDate"/>
+        <ns2:ExecutionScript name="thirdParty1_ReadOnly"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnSaveTrigger" name="OnSaveTrigger"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.GEN.GENDetails.OnCreateTrigger" name="OnCreateTrigger"/>
+        <componentAction observing="agrType" trigger="ONCHANGE" scriptRef="OnChangeTrigger_UnSetCPName"/>
+        <componentAction observing="cpName" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetCPDetails"/>
+        <componentAction observing="cpName" trigger="VALIDATE" scriptRef="OnValidateTrigger_importValidateCpName"/>
+        <componentAction observing="startDate, termType, term" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetEndDate"/>
+        <componentAction observing="startDate, termType, term" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetTermDate"/>
+        <componentAction observing="termType, term, autoRenewal, renNoticePer" trigger="ONCHANGE" scriptRef="OnChangeTrigger_SetRenDate"/>
+        <componentAction trigger="SAVE" scriptRef="OnSaveTrigger"/>
+        <componentAction trigger="CREATE" scriptRef="OnCreateTrigger"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="GENAddresses">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Addresses" attribute="GENAddresses"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="GENContacts">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Contacts" attribute="GENContacts"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="GENExhibits">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Exhibits" attribute="GENExhibits"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <enumParamDef maxlength="255" ref="enum:string" name="genagrTypeList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Sales"/>
+            <possibleValue ref="Procurement"/>
+            <possibleValue ref="NDA"/>
+            <possibleValue ref="Employment"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Agreement Type List" attribute="genagrTypeList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Sales" attribute="Sales"/>
+                <ns2:LocalizedString value="Procurement" attribute="Procurement"/>
+                <ns2:LocalizedString value="NDA" attribute="NDA"/>
+                <ns2:LocalizedString value="Employment" attribute="Employment"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="paginatedPopUp" maxlength="255" ref="enum:string" name="gencpNameList">
+        <dynamicValueList columns="name" displayChild="name" pageSize="10" cache="false" importPath="(/bundles[@name='DCustomerBO']|/bundles[@name='DCPBO']|/bundles[@name='DVendorBO'])/*[dirStatus/internal = 'Active']" xpathprocessor="jaxen" path="(/bundles[@name=f:selectFromMap('[Employment:DCPBO]',$thisComponent/agrType,'')]/*[dirStatus/internal = 'Active' and dirCategory/internal = 'Employee'])|(/bundles[@name=f:selectFromMap('[Sales:DCustomerBO,Procurement:DVendorBO ]',$thisComponent/agrType,'DCPBO')]/*[dirStatus/internal = 'Active'])"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Counterparty Name List" attribute="gencpNameList"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="gencontStatusList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Draft"/>
+            <possibleValue ref="Awaiting Signature"/>
+            <possibleValue ref="Active"/>
+            <possibleValue ref="Terminated"/>
+            <possibleValue ref="Expired"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Contract Status List" attribute="gencontStatusList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Draft" attribute="Draft"/>
+                <ns2:LocalizedString value="Awaiting Signature" attribute="Awaiting Signature"/>
+                <ns2:LocalizedString value="Active" attribute="Active"/>
+                <ns2:LocalizedString value="Terminated" attribute="Terminated"/>
+                <ns2:LocalizedString value="Expired" attribute="Expired"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="cgenadrTypeList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Legal Entity"/>
+            <possibleValue ref="Notices"/>
+            <possibleValue ref="Ship To"/>
+            <possibleValue ref="Bill To"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Address Type List" attribute="cgenadrTypeList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Legal Entity" attribute="Legal Entity"/>
+                <ns2:LocalizedString value="Notices" attribute="Notices"/>
+                <ns2:LocalizedString value="Ship To" attribute="Ship To"/>
+                <ns2:LocalizedString value="Bill To" attribute="Bill To"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+</template>

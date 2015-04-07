@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template type="general" templateVersion="1.0" accountID="0.0" xmlns="http://selectica.com/internalmodel/data" xmlns:ns2="http://selectica.com/internalmodel/SharedElements">
+    <module infoComponentRef="ReqCPDetails" type="CPData" name="CPData">
+        <component max="1" min="1" ref="CPDetails" name="ReqCPDetails"/>
+        <component max="*" min="0" ref="CPReqDCPDBA" name="ReqDCPDBA"/>
+        <component max="*" min="0" ref="CPReqContact" name="ReqContact"/>
+        <component max="*" min="0" ref="CPAdditionalAddresses" name="ReqCPAdditionalAddresses"/>
+        <component max="*" min="0" ref="Attachment" name="ReqAttachment"/>
+        <component max="*" min="0" ref="AComment" name="ReqAComment"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Counterparty" attribute="CPData"/>
+                <ns2:LocalizedString value="Summary" attribute="ReqCPDetails"/>
+                <ns2:LocalizedString value="DBA Details" attribute="ReqDCPDBA"/>
+                <ns2:LocalizedString value="Counterparty Contact" attribute="ReqContact"/>
+                <ns2:LocalizedString value="Additional Addresses" attribute="ReqCPAdditionalAddresses"/>
+                <ns2:LocalizedString value="Attachments" attribute="ReqAttachment"/>
+                <ns2:LocalizedString value="Comments" attribute="ReqAComment"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </module>
+    <componentDef xmlVersion="" tableName="CONTRACT1" type="CPDetails" extends="InfoComponent" name="CPDetails">
+        <param readonly="true" valuePath="bundle/bundleTrackingNum" ref="sysInteger" name="trackingNumber"/>
+        <param defaultValue="?" ref="genericString" isHeader="true" name="name"/>
+        <param defaultValue="Active" ref="directoryStatusList" isHeader="true" name="dirStatus"/>
+        <param readonly="false" ref="Counterparty Category List" isHeader="true" name="dirCategory"/>
+        <param ref="genericString" name="dirParentName"/>
+        <param ref="genericString" name="dirAdr1"/>
+        <param ref="genericString" name="dirAdr2"/>
+        <param ref="genericString" name="dirCity"/>
+        <param ref="usStatesList" name="dirState"/>
+        <param ref="genericString" name="dirZip"/>
+        <param defaultValueScript="dirCountry_DefaultValue" ref="countryList" name="dirCountry"/>
+        <param ref="genericString" name="dirWebSite"/>
+        <param ref="commentString" name="dirDesc"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Summary" attribute="CPDetails"/>
+                <ns2:LocalizedString value="Tracking #" attribute="trackingNumber"/>
+                <ns2:LocalizedString value="Counterparty Name" attribute="name"/>
+                <ns2:LocalizedString value="Counterparty Status" attribute="dirStatus"/>
+                <ns2:LocalizedString value="Counterparty Category" attribute="dirCategory"/>
+                <ns2:LocalizedString value="Counterparty Parent Name" attribute="dirParentName"/>
+                <ns2:LocalizedString value="Counterparty Address Line 1" attribute="dirAdr1"/>
+                <ns2:LocalizedString value="Counterparty Address Line 2" attribute="dirAdr2"/>
+                <ns2:LocalizedString value="Counterparty City" attribute="dirCity"/>
+                <ns2:LocalizedString value="Counterparty State/Province" attribute="dirState"/>
+                <ns2:LocalizedString value="Counterparty Zip/Postal Code" attribute="dirZip"/>
+                <ns2:LocalizedString value="Counterparty Country" attribute="dirCountry"/>
+                <ns2:LocalizedString value="Counterparty Website" attribute="dirWebSite"/>
+                <ns2:LocalizedString value="Counterparty Description" attribute="dirDesc"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+        <ns2:ExecutionScript name="dirCountry_DefaultValue"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.CP.CPDetails.OnSaveTrigger" name="OnSaveTrigger"/>
+        <ns2:ExecutionScript lang="Java" class="com.selectica.definitions.CP.CPDetails.OnValidateTrigger" name="OnValidateTrigger"/>
+        <componentAction trigger="SAVE" scriptRef="OnSaveTrigger"/>
+        <componentAction trigger="VALIDATE" scriptRef="OnValidateTrigger"/>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="CPDBADetails">
+        <param ref="genericString" isHeader="true" name="dbaName"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="DBA Details" attribute="CPDBADetails"/>
+                <ns2:LocalizedString value="DBA Name" attribute="dbaName"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="CPCounterpartyContact">
+        <param ref="genericString" isHeader="true" name="prContactName"/>
+        <param ref="genericString" isHeader="true" name="prContactEmail"/>
+        <param ref="genericString" isHeader="true" name="prContactTitle"/>
+        <param ref="genericString" isHeader="true" name="secContactName"/>
+        <param ref="genericString" isHeader="true" name="secContactEmail"/>
+        <param ref="genericString" isHeader="true" name="secContactTitle"/>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Counterparty Contact" attribute="CPCounterpartyContact"/>
+                <ns2:LocalizedString value="Counterparty Primary Contact Name" attribute="prContactName"/>
+                <ns2:LocalizedString value="Counterparty Primary Contact Email" attribute="prContactEmail"/>
+                <ns2:LocalizedString value="Counterparty Primary Contact Title" attribute="prContactTitle"/>
+                <ns2:LocalizedString value="Counterparty Secondary Contact Name" attribute="secContactName"/>
+                <ns2:LocalizedString value="Counterparty Secondary Contact Email" attribute="secContactEmail"/>
+                <ns2:LocalizedString value="Counterparty Secondary Contact Title" attribute="secContactTitle"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <componentDef copyable="false" mergeable="false" xmlVersion="" tableName="MCPCOMP04" extends="Component" name="CPAdditionalAddresses">
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Additional Addresses" attribute="CPAdditionalAddresses"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </componentDef>
+    <enumParamDef style="searchableLookUp" maxlength="255" ref="enum:string" name="dirCPCatList">
+        <possibleValueList>
+            <possibleValue ref=""/>
+            <possibleValue ref="Counterparty"/>
+            <possibleValue ref="Customer"/>
+            <possibleValue ref="Vendor"/>
+        </possibleValueList>
+        <ns2:display>
+            <ns2:LocaleSet locale="en">
+                <ns2:LocalizedString value="Counterparty Category List" attribute="dirCPCatList"/>
+                <ns2:LocalizedString value="" attribute=""/>
+                <ns2:LocalizedString value="Counterparty" attribute="Counterparty"/>
+                <ns2:LocalizedString value="Customer" attribute="Customer"/>
+                <ns2:LocalizedString value="Vendor" attribute="Vendor"/>
+            </ns2:LocaleSet>
+        </ns2:display>
+    </enumParamDef>
+</template>
